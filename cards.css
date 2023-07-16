@@ -1,0 +1,47 @@
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 5vw;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: max(150px, 25vw);
+    width: max(150px, 25vw);
+    font-size: 3.5vw;
+    border: 1px solid var(--text-color);
+    padding: 1rem;
+    color: var(--bg-color);
+    background: linear-gradient(51deg, rgba(173,239,255,1) 0%, rgba(175,255,245,1) 64%, rgba(255,201,154,1) 100%);
+    cursor: pointer;
+}
+
+.card:nth-of-type(2n) {
+    color: var(--text-color);
+    background: linear-gradient(51deg, rgba(255,173,223,1) 0%, rgba(255,175,175,1) 64%, rgba(245,255,154,1) 100%);
+}
+
+.card:hover>span {
+    padding-left: 5%;
+}
+
+.card:hover>span:nth-child(2n) {
+    padding-left: 10%;
+}
+
+.card:hover>span:nth-child(3n) {
+    padding-left: 12%;
+}
+
+.card>span {
+    opacity: 25%;
+    transition: all .3s ease;
+}
+.card>span:nth-child(2n) {
+    opacity: 50%;
+}
+.card>span:nth-child(3n) {
+    opacity: 100%;
+}

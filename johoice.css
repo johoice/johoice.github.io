@@ -1,0 +1,72 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    --color-dark: #171717;
+    --color-light: #f1f1f1;
+    --bg-color: var(--color-dark);
+    --text-color: var(--color-light);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: "IBM Plex Mono", serif;
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        --bg-color: var(--color-light);
+        --text-color: var(--color-dark);
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body > div {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header, address {
+    text-align: center;
+}
+
+header {
+    font-size: 2.5rem;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.socials {
+    font-size: 1.2rem;
+    width: 400px;
+    justify-content: center;
+}
+
+.socials>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.instance {
+    font-size: 1rem;
+}
+
+footer {
+    width: 100vw;
+}
+
