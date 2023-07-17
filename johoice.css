@@ -6,14 +6,14 @@ body {
 
 body {
     min-height: 100vh;
-    width: 100vw;
+    width: 100%;
     --color-dark: #171717;
     --color-light: #f1f1f1;
     --bg-color: var(--color-dark);
     --text-color: var(--color-light);
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: "IBM Plex Mono", serif;
+    font-family: "IBM Plex Mono", "Helvetica Neue", serif;
 }
 
 @media (prefers-color-scheme: light) {
@@ -29,12 +29,15 @@ body {
 
 body > div {
     height: 100vh;
-    width: 100vw;
-
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+}
+
+body > div > div {
+    width: 100%;
 }
 
 header, address {
@@ -42,24 +45,53 @@ header, address {
 }
 
 header {
-    font-size: 2.5rem;
+    font-size: min(2.5rem, 5vw);
 }
 
 main {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.infos-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
 }
 
-.socials {
+.infos {
     font-size: 1.2rem;
-    width: 400px;
+    width: min(90vw, 400px);
     justify-content: center;
 }
 
-.socials>div {
+.infos>div {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    background: linear-gradient(51deg, rgba(173,239,255,1) 0%, rgba(175,255,245,1) 64%, rgba(255,201,154,1) 100%);
+    color: var(--color-dark);
+    padding: 1rem;
+}
+
+.infos>div:nth-child(2n) {
+    background: linear-gradient(51deg, rgba(255,173,223,1) 0%, rgba(255,175,175,1) 64%, rgba(245,255,154,1) 100%);
+}
+
+.infos>*:first-child {
+    margin-bottom: .5rem;
+}
+.infos>div {
+    transition: all .1s ease;
+}
+.infos>div:hover {
+    scale: 1.05;
+    box-shadow: 0 0 10px 5px #00000021;
 }
 
 .instance {
@@ -67,6 +99,9 @@ main {
 }
 
 footer {
-    width: 100vw;
+    margin-top: 4rem;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    width: 100%;
 }
 
