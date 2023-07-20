@@ -3,7 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 5vw;
+    margin-bottom: 3vw;
 }
 
 .card {
@@ -12,11 +12,22 @@
     width: max(150px, 25%);
     height: max(150px, 25vw);
     font-size: max(1.2rem, 3.5vw);
+    --font-weight: 700;
+    font-variation-settings:
+            "wght" var(--font-weight),
+            "CONT" var(--font-cont),
+            "MIDL" var(--font-midl);
     border: 1px solid var(--color-light);
-    padding: 1rem;
+    padding: .5rem 1.5rem 1.5rem;
     color: var(--color-dark);
     background: linear-gradient(51deg, rgba(173,239,255,1) 0%, rgba(175,255,245,1) 64%, rgba(255,201,154,1) 100%);
     cursor: pointer;
+    justify-content: space-around;
+}
+
+.card:hover {
+    --font-weight: 1000;
+    --font-midl: -1000;
 }
 
 .card:nth-of-type(2n) {

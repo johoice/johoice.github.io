@@ -1,3 +1,21 @@
+@font-face {
+    font-family: "KyivTypeSans";
+    src: url("./fonts/KyivTypeSans.woff2") format("woff2-variations");
+    font-weight: 0 1000;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    font-family: "KyivTypeSans", sans-serif;
+    --font-weight: 500;
+    --font-cont: 0;
+    --font-midl: 0;
+    font-variation-settings: "wght" var(--font-weight),
+    "CONT" var(--font-cont),
+    "MIDL" var(--font-midl);
+}
+
 html,
 body {
     margin: 0;
@@ -13,7 +31,6 @@ body {
     --text-color: var(--color-light);
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: "IBM Plex Mono", "Helvetica Neue", serif;
 }
 
 @media (prefers-color-scheme: light) {
@@ -44,8 +61,18 @@ header, address {
     text-align: center;
 }
 
-header {
-    font-size: min(2.5rem, 5vw);
+.title {
+    font-size: 4rem;
+    --font-weight: 800;
+    font-variation-settings: "wght" var(--font-weight),
+    "CONT" var(--font-cont),
+    "MIDL" var(--font-midl);
+    transition: font-variation-settings .3s;
+}
+
+.title:hover {
+    --font-weight: 1000;
+    --font-midl: -1000;
 }
 
 main {
@@ -70,28 +97,31 @@ main {
     justify-content: center;
 }
 
-.infos>div {
+.infos > div {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background: linear-gradient(51deg, rgba(173,239,255,1) 0%, rgba(175,255,245,1) 64%, rgba(255,201,154,1) 100%);
+    background: linear-gradient(51deg, rgba(173, 239, 255, 1) 0%, rgba(175, 255, 245, 1) 64%, rgba(255, 201, 154, 1) 100%);
     color: var(--color-dark);
     padding: 1rem;
 }
 
-.infos>div:nth-child(2n) {
-    background: linear-gradient(51deg, rgba(255,173,223,1) 0%, rgba(255,175,175,1) 64%, rgba(245,255,154,1) 100%);
+.infos > div:nth-child(2n) {
+    background: linear-gradient(51deg, rgba(255, 173, 223, 1) 0%, rgba(255, 175, 175, 1) 64%, rgba(245, 255, 154, 1) 100%);
 }
 
-.infos>*:first-child {
+.infos > *:first-child {
     margin-bottom: .5rem;
 }
-.infos>div {
+
+.infos > div {
     transition: all .1s ease;
 }
-.infos>div:hover {
+
+.infos > div:hover {
     scale: 1.05;
     box-shadow: 0 0 10px 5px #00000021;
+    border-radius: 5px;
 }
 
 .instance {
@@ -99,7 +129,7 @@ main {
 }
 
 footer {
-    margin-top: 4rem;
+    margin-top: calc(3vw + 2rem);
     background-color: var(--text-color);
     color: var(--bg-color);
     width: 100%;
