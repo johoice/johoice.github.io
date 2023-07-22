@@ -5,73 +5,164 @@
     <title>joho</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;700&family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;700&family=IBM+Plex+Sans&display=swap"
+          rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="johoice.css">
     <link rel="stylesheet" href="cards.css">
 </head>
 <body>
-<div>
+<div class="page">
     <div>
         <header>
             <h1 class="title">johoice</h1>
         </header>
         <main>
             <div class="cards">
-                <div class="card">
+                <a href="#welcome" class="card">
                     <span>joho</span>
                     <span>joho</span>
                     <span>joho</span>
                     <span>joho</span>
                     <span>joho</span>
-                </div>
-                <div class="card">
+                </a>
+                <a href="#jobs" class="card">
+                    <span>work</span>
+                    <span>work</span>
+                    <span>work</span>
+                    <span>work</span>
+                    <span>work</span>
+                </a>
+                <a href="#dev" class="card">
                     <span>dev</span>
                     <span>dev</span>
                     <span>dev</span>
                     <span>dev</span>
                     <span>dev</span>
-                </div>
-                <div class="card">
-                    <span>cs</span>
-                    <span>cs</span>
-                    <span>cs</span>
-                    <span>cs</span>
-                    <span>cs</span>
-                </div>
-                <div class="card">
-                    <span>about</span>
-                    <span>about</span>
-                    <span>about</span>
-                    <span>about</span>
-                    <span>about</span>
-                </div>
+                </a>
+                <a href="#socials" class="card">
+                    <span>social</span>
+                    <span>social</span>
+                    <span>social</span>
+                    <span>social</span>
+                    <span>social</span>
+                </a>
             </div>
-            <div class="infos-container">
-                <section class="infos">
-                    <h2>Socials</h2>
-                    <div>Lemmy <span><b>@joho</b><i class="instance">@lemmy.world</i></span></div>
-                    <div>Mastodon <span><b>@johoice</b><i class="instance">@mastodon.social</i></span></div>
-                    <div>Matrix <span><b>@johoice</b><i class="instance">:matrix.org</i></span></div>
-                </section>
-                <section class="infos">
-                    <h2>Working @</h2>
-                    <div>Bredex GmbH<span>since 2017</span></div>
-                </section>
-                <section class="infos">
-                    <h2>Programming</h2>
-                    <div>Java</div>
-                    <div>Python</div>
-                    <div>JavaScript/TypeScript</div>
-                    <div>Go</div>
-                </section>
+            <div class="content">
+                <div id="welcome" class="welcome">
+                    <div>
+                        <h1 class="welcome-header">Welcome</h1>
+                        <div class="welcome-text">
+                            <p>
+                                Hi I'm johoice! A Fullstack developer from Germany.
+                                I'm mainly working with Java, Python, JavaScript and TypeScript.
+                                Lately I'm getting more and more into Go aswell.
+                            </p>
+                            <details>
+                                <summary class="johoice-summary"><h2>Why johoice?</h2></summary>
+                                <div class="johoice-info">
+                                    <p>
+                                        The <i>ice</i> part originated in our school library a long time ago. A classmate
+                                        showed
+                                        us an online browser game (OGame I believe).
+                                        Said classmate already had an account with the username <i>firefighter</i>. So
+                                        naturally we all started using names like
+                                        <i>waterfigher</i>, <i>earthfighter</i> and I picked <i>icefighter</i>. The fighter part
+                                        sounded quite lame after a while so just the ice stayed.
+                                    </p>
+                                    <p>
+                                        The origin of <i>joho</i> is quite similar. I used the name first on a LAN party.
+                                        At some point changing our names in CS 1.6 was funnier than actually playing.
+                                        Someone
+                                        started with the name juhu (like a yay in german) and everybody else followed with
+                                        <i>jaha</i>,
+                                        <i>jihi</i>, <i>jehe</i> and my choice was <i>joho</i>. After the LAN I just kept
+                                        the name and didn't change it back.
+                                    </p>
+                                    <p>
+                                        As <i>joho</i> is sadly often already taken on various websites and services I added
+                                        the ice part. So the name is a nod to the early days of my gaming experiences.
+                                    </p>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                    <div class="avatar-container">
+                        <img class="avatar" src="images/avatar.jpg" alt="image of johoice">
+                    </div>
+                </div>
+                <div id="jobs" class="jobs">
+                    <h1>Work & Education</h1>
+                    <div class="job-container">
+                        <div class="job">
+                            <div class="job-info">
+                                <h2 class="job-title">Project Lead</h2>
+                                <div class="company">Bredex GmbH</div>
+                            </div>
+                            <p class="job-description">At Bredex I'm currently working as a Project Lead for an
+                                international team of developers. Luckily I am still able to develop aswell. This is
+                                highly important for me personally to keep up with the latest technologies and
+                                changes.</p>
+                        </div>
+                        <div class="job">
+                            <div class="job-info">
+                                <h2 class="job-title">Senior Developer</h2>
+                                <div class="company">Bredex GmbH</div>
+                            </div>
+                            <p class="job-description">As a Fullstack Senior Developer I worked mainly
+                                with Java, JavaScript and TypeScript. I migrated legacy projects from SVN, Java 6 & ANT
+                                to Git, Java
+                                17 & Maven and setup CI/CD workflows.</p>
+                        </div>
+                        <div class="job">
+                            <div class="job-info">
+                                <h2 class="job-title">Junior Developer</h2>
+                                <div class="company">Bredex GmbH</div>
+                            </div>
+                            <p class="job-description">When I joined Bredex as a Junior Developer I had some great
+                                learning opportunities working in one of the larger projects with some experienced
+                                developers.</p>
+                        </div>
+                        <div class="job">
+                            <div class="job-info">
+                                <h2 class="job-title">Computer Science</h2>
+                                <div class="company">TU Braunschweig</div>
+                            </div>
+                            <p class="job-description">I did my bachelor's degree at the technical university of
+                                Braunschweig in Germany. For my Bachelor thesis I was working with Graph-oriented Query
+                                Languages.</p>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="skills-header">Skills</h1>
+                <div class="infos-container">
+                    <section id="dev" class="infos">
+                        <h2>Languages</h2>
+                        <div>Java<span>+++</span></div>
+                        <div>JavaScript/TypeScript<span>+++</span></div>
+                        <div>Python<span>++</span></div>
+                        <div>Go<span>+</span></div>
+                    </section>
+                    <section class="infos">
+                        <h2>Tools & Frameworks</h2>
+                        <div>Spring Boot<span>+++</span></div>
+                        <div>Django<span>+++</span></div>
+                        <div>SQL<span>+++</span></div>
+                        <div>React<span>++</span></div>
+                        <div>Angular<span>++</span></div>
+                    </section>
+                    <section id="socials" class="infos">
+                        <h1>Socials</h1>
+                        <div>Lemmy <span><b>@joho</b><i class="instance">@lemmy.world</i></span></div>
+                        <div>Mastodon <span><b>@johoice</b><i class="instance">@mastodon.social</i></span></div>
+                        <div>Matrix <span><b>@johoice</b><i class="instance">:matrix.org</i></span></div>
+                    </section>
+                </div>
             </div>
         </main>
     </div>
     <footer>
-        <address>
-            <p>johoice - work in progress</p>
-        </address>
+        <p>johoice - work in progress</p>
     </footer>
 </div>
 </body>
