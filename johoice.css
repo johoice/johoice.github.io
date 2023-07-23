@@ -50,8 +50,19 @@ body {
     }
 }
 
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
+}
+
+b {
+    --font-weight: 700;
+    --font-cont: 400;
+    --font-midl: -1000;
+    font-variation-settings: "wght" var(--font-weight),
+    "CONT" var(--font-cont),
+    "MIDL" var(--font-midl);
 }
 
 a:link {
@@ -70,12 +81,21 @@ a:active {
     text-decoration: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.1;
+}
+
 h1 {
+    margin-top: 3rem;
     font-size: 3rem;
 }
 
 details summary > * {
     display: inline;
+}
+
+details summary::-webkit-details-marker {
+    display:none;
 }
 
 details > summary {
@@ -189,7 +209,8 @@ main {
 }
 
 .welcome-text {
-    max-width: 55ch;
+    max-width: min(calc(100vw - 2rem), 55ch);
+    padding-right: 1rem;
 }
 
 .johoice-info {
@@ -200,7 +221,7 @@ main {
     margin-right: 1rem;
     z-index: 1;
     background-color: var(--color-dark-70);
-    box-shadow: 2px 5px 15px 5px #00000011;
+    box-shadow: 0 5px 15px 0 #00000041;
     border-radius: var(--border-radius);
 }
 .avatar-container {
@@ -214,6 +235,14 @@ main {
     max-height: 15rem;
     height: 20rem;
     border-radius: 100vw;
+    border-style: solid;
+    border-width: .5rem;
+    border-color: var(--clr-accent-blue);
+    transition: border-color .6s ease;
+}
+
+.avatar:hover {
+    border-color: var(--clr-accent-orange);
 }
 
 @media screen and (max-width: 1200px){
@@ -270,14 +299,14 @@ main {
 .job {
     position: relative;
     background-color: var(--color-dark-80);
-    padding: 1rem;
+    padding: 1.25rem 1rem;
     border-radius: var(--border-radius);
     min-width: clamp(40ch, 45ch, 50ch);
 }
 
 @media screen and (max-width: 600px) {
     .job {
-        min-width: calc(100vw - 2rem);
+        min-width: calc(100% + 1rem);
     }
 }
 
@@ -298,7 +327,9 @@ main {
 
 .job-title {
     color: var(--clr-accent-pink);
-    margin-block: .5rem;
+    margin-top: 0;
+    margin-bottom: .5rem;
+
 }
 
 .company {
@@ -311,7 +342,7 @@ main {
 }
 
 .job-description {
-    margin-top: 0;
+    margin-block: 0;
 }
 
 
@@ -331,6 +362,17 @@ main {
 .infos {
     min-width: calc(25vw - 1rem);
     font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .infos-container {
+        max-width: 100%;
+        padding-right: 20vw;
+    }
+
+    .infos {
+        min-width: 100%;
+    }
 }
 
 @media screen and (max-width: 600px) {

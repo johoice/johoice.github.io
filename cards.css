@@ -21,8 +21,6 @@
             "CONT" var(--font-cont),
             "MIDL" var(--font-midl);
     border: 1px solid var(--color-light);
-    padding: .5rem 1.5rem 1.5rem;
-
     background: linear-gradient(51deg, rgba(173,239,255,1) 0%, rgba(175,255,245,1) 64%, rgba(255,201,154,1) 100%);
     cursor: pointer;
 }
@@ -38,18 +36,19 @@
 }
 
 .card:hover>span {
-    padding-left: 5%;
+    padding-left: calc(2vw + 5%);
 }
 
 .card:hover>span:nth-child(2n) {
-    padding-left: 10%;
+    padding-left: calc(2vw + 10%);
 }
 
 .card:hover>span:nth-child(3n) {
-    padding-left: 12%;
+    padding-left: calc(2vw + 12%);
 }
 
 .card>span {
+    padding-left: 2vw;
     opacity: 25%;
     transition: all .3s ease;
 }
